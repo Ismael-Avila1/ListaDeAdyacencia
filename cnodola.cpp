@@ -5,17 +5,18 @@ cNodoLA::cNodoLA() {
     pSig = nullptr;
 }
 
-cNodoLA::cNodoLA(int d, int v, int s) {
+cNodoLA::cNodoLA(int d, int v, int s, std::string a) {
     pAnt = nullptr;
     pSig = nullptr;
 
     infoAdyacencia.distancia = d;
     infoAdyacencia.vista = v;
     infoAdyacencia.seguridad = s;
+    infoAdyacencia.adyacenteDe = a;
 }
 
-void cNodoLA::insertarAdelante(int d, int v, int s) {
-    cNodoLA* newNode = new cNodoLA(d, v, s);
+void cNodoLA::insertarAdelante(int d, int v, int s, std::string a) {
+    cNodoLA* newNode = new cNodoLA(d, v, s, a);
 
     newNode->pSig = this->pSig;
     newNode->pAnt = this;

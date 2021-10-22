@@ -12,9 +12,9 @@ private:
 
 
     cNodoLA();
-    cNodoLA(int d, int v, int s);
+    cNodoLA(int d, int v, int s, std::string a);
 
-    void insertarAdelante(int d, int v, int s);
+    void insertarAdelante(int d, int v, int s, std::string a);
     void eliminarAdelante();
 
     friend class cIteradorLA;

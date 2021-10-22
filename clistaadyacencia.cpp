@@ -15,8 +15,8 @@ cListaAdyacencia::~cListaAdyacencia() {
     final.pAnt = &inicio;
 }
 
-void cListaAdyacencia::insertar(int d, int v, int s) {
-    final.pAnt->insertarAdelante(d, v, s);
+void cListaAdyacencia::insertar(int d, int v, int s, std::string a) {
+    final.pAnt->insertarAdelante(d, v, s, a);
 }
 
 //void cListaAdyacencia::eliminar(std::string nombre) {

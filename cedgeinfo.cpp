@@ -2,10 +2,11 @@
 
 cEdgeInfo::cEdgeInfo() {}
 
-cEdgeInfo::cEdgeInfo(int d, int v, int s) {
+cEdgeInfo::cEdgeInfo(int d, int v, int s, std::string a) {
     distancia = d;
     vista = v;
     seguridad = s;
+    adyacenteDe = a;
 }
 
 void cEdgeInfo::imprimir() {

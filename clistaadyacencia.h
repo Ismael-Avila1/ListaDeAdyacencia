@@ -17,7 +17,7 @@ public:
     cListaAdyacencia();
     ~cListaAdyacencia();
 
-    void insertar(int d, int v, int s); // la insercion se hace al final de la lista
+    void insertar(int d, int v, int s, std::string a); // la insercion se hace al final de la lista
     void eliminar(std::string nombre); // la eliminacion requiere busqueda
 
     int size();

@@ -8,9 +8,10 @@ private:
     int distancia;
     int vista;
     int seguridad;
+    std::string adyacenteDe;
 
     cEdgeInfo();
-    cEdgeInfo(int d, int v, int s);
+    cEdgeInfo(int d, int v, int s, std::string a);
 
     void imprimir();
 

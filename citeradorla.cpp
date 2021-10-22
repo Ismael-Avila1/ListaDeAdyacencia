@@ -6,8 +6,8 @@ void cIteradorLA::setNodo(cNodoLA *pNodo) {
     pActual = pNodo;
 }
 
-void cIteradorLA::insertarAdelante(int d, int v, int s) {
-    pActual->insertarAdelante(d, v, s);
+void cIteradorLA::insertarAdelante(int d, int v, int s, std::string a) {
+    pActual->insertarAdelante(d, v, s, a);
 }
 
 void cIteradorLA::eliminarAdelante() {
