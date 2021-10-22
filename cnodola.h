@@ -2,7 +2,6 @@
 #define CNODOLA_H
 
 #include "cedgeinfo.h"
-#include "cnodo.h"
 
 class cNodoLA {
 private:
@@ -10,8 +9,6 @@ private:
     cNodoLA* pSig;
 
     cEdgeInfo infoAdyacencia;
-
-    cNodo* adyacente;
 
 
     cNodoLA();

@@ -19,16 +19,16 @@ void cListaAdyacencia::insertar(int d, int v, int s) {
     final.pAnt->insertarAdelante(d, v, s);
 }
 
-void cListaAdyacencia::eliminar(std::string nombre) {
-    if(isEmpty())
-        return;
+//void cListaAdyacencia::eliminar(std::string nombre) {
+//    if(isEmpty())
+//        return;
 
-    cIteradorLA it;
+//    cIteradorLA it;
 
-    for(it=begin(); it!=end(); it++)
-        if(it.pActual->adyacente->infoNodo.nombre == nombre)
-            it.pActual->pAnt->eliminarAdelante();
-}
+//    for(it=begin(); it!=end(); it++)
+//        if(it.pActual->adyacente->infoNodo.nombre == nombre)
+//            it.pActual->pAnt->eliminarAdelante();
+//}
 
 int cListaAdyacencia::size() {
     int contNodes = 0;
@@ -48,15 +48,15 @@ bool cListaAdyacencia::isFull() {
     return false;
 }
 
-void cListaAdyacencia::imprimir() {
-    cIteradorLA it;
+//void cListaAdyacencia::imprimir() {
+//    cIteradorLA it;
 
-    for(it=begin(); it!=end(); it++) {
-        std::cout << "\t\t" << it.pActual->adyacente->infoNodo.nombre << std::endl;
-        std::cout << "\tInformacion de la ruta..." << std::endl;
-        it.pActual->infoAdyacencia.imprimir();
-    }
-}
+//    for(it=begin(); it!=end(); it++) {
+//        std::cout << "\t\t" << it.pActual->adyacente->infoNodo.nombre << std::endl;
+//        std::cout << "\tInformacion de la ruta..." << std::endl;
+//        it.pActual->infoAdyacencia.imprimir();
+//    }
+//}
 
 cIteradorLA &cListaAdyacencia::begin() {
     itBegin.setNodo(inicio.pSig);
