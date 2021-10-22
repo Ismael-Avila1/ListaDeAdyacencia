@@ -20,5 +20,3 @@ void cInfoPueblo::imprimir() {
     std::cout << "\tLa temperatura media es de " << tempMedia << " grados Centigrados" << std::endl;
     std::cout << "\tSu atraccion principal es " << atraccPrincipal << std::endl;
 }
-
-

@@ -29,7 +29,6 @@ public:
 
     cIteradorLA& begin();
     cIteradorLA& end();
-
 };
 
 #endif // CLISTAADYACENCIA_H
