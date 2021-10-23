@@ -16,6 +16,8 @@ private:
     void imprimir();
 
     friend class cNodoLA;
+    friend class cIteradorLA;
+    friend class cListaAdyacencia;
 };
 
 #endif // CEDGEINFO_H
