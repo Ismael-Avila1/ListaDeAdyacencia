@@ -12,5 +12,5 @@ cEdgeInfo::cEdgeInfo(int d, int v, int s, std::string a) {
 void cEdgeInfo::imprimir() {
     std::cout << "\tDistancia: " << distancia << "km" << std::endl;
     std::cout << "\tVista: " << vista << " puntos" << std::endl;
-    std::cout << "\tSeguridad: " << seguridad << " puntos" << std::endl;
+    std::cout << "\tSeguridad: " << seguridad << " puntos" << std::endl << std::endl;
 }
