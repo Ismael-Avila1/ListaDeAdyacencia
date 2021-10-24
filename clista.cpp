@@ -1,6 +1,9 @@
 #include "clista.h"
 
-cLista::cLista() {}
+cLista::cLista() {
+    inicio.pSig = &final;
+    final.pAnt = &inicio;
+}
 
 cLista::~cLista() {
     cIterador it;
@@ -16,9 +19,11 @@ cLista::~cLista() {
 cNodo *cLista::getNodo(std::string nombreNodo) {
     cNodo* temp = inicio.pSig;
 
-    while (temp != &final)
+    while (temp != &final) {
         if(temp->infoNodo.nombre == nombreNodo)
             return temp;
+        temp = temp->pSig;
+    }
 
     return nullptr;
 }
