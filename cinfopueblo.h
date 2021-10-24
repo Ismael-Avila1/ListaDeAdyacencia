@@ -19,6 +19,7 @@ private:
     void imprimir();
 
     friend class cNodo;
+    friend class cLista;
 };
 
 #endif // CINFOPUEBLO_H
