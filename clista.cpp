@@ -46,17 +46,19 @@ void cLista::insertarAdyacencia(std::string origen, int d, int v, int s, std::st
 }
 
 void cLista::eliminarNodo(std::string nombre) {
+    cNodo* pNodo = getNodo(nombre);
+
+    if(pNodo == nullptr) {
+        std::cout << "Nodo Incorrecto" << std::endl;
+        return;
+    }
+
     cIterador it;
 
-    for(it=begin(); it!=end(); it++)
-        if(it.pActual->infoNodo.nombre == nombre) {
+    for(it=begin(); it!= end(); it++)
+        it.pActual->eliminarAdyacencia(nombre);
 
-            cIterador it2;
-            for(it2=begin(); it2!=end(); it++)
-                it2.pActual->lstLA.eliminar(nombre);
-
-            it.pActual->pAnt->eliminarAdelante();
-        }
+    pNodo->pAnt->eliminarAdelante();
 }
 
 void cLista::eliminarAdyacencia(std::string origen, std::string destino) {
