@@ -5,9 +5,17 @@
 
 using namespace std;
 
+void capturarNodo(cLista& g);
+void capturarAdyacencia(cLista& g);
+
+void eliminarNodo(cLista& g);
+void eliminarAdyacencia(cLista& g);
+
 int main()
 {
     cLista g;
+
+    int op;
 
     // Insertando noodos hardcodeados
     g.insertarNodo("Mazamitla", "Jalisco", 2005, "Semiseco y semi calido", 1, "Mundo Aventura Parque Ecologico");
@@ -61,5 +69,131 @@ int main()
     g.insertarAdyacencia("Mazamitla", 396, 7, 5, "Sayulita");
     g.insertarAdyacencia("Sayulita", 320, 4, 8, "Tapalpa");
 
-    g.imprimir();
+
+    do {
+        cout << "\n\t1. Insertar un nuevo nodo" << endl;
+        cout << "\t2. Insertar adyacencia" << endl;
+        cout << "\t3. Eliminar nodo" << endl;
+        cout << "\t4. Eliminar adyacencia" << endl;
+        cout << "\t5. Imprimir Grafo" << endl;
+        cout << "\t0. Salir" << endl;
+
+        cout << "Ingresa una opcion: ";
+        cin >> op;
+
+        switch (op) {
+        case 1:
+            capturarNodo(g);
+            cout << "\n\n\tPresiona <ENTER> para continuar..." << endl;
+            getch();
+            break;
+
+        case 2:
+            capturarAdyacencia(g);
+            cout << "\n\n\tPresiona <ENTER> para continuar..." << endl;
+            getch();
+            break;
+
+        case 3:
+            eliminarNodo(g);
+            cout << "\n\n\tPresiona <ENTER> para continuar..." << endl;
+            getch();
+            break;
+
+        case 4:
+            eliminarAdyacencia(g);
+            cout << "\n\n\tPresiona <ENTER> para continuar..." << endl;
+            getch();
+            break;
+
+        case 5:
+            g.imprimir();
+            cout << "\n\n\tPresiona <ENTER> para continuar..." << endl;
+            getch();
+            break;
+
+        case 0:
+            cout << "\n\tFin del Programa." << endl;
+            cout << "\tPresiona <ENTER> para continuar..." << endl;
+            getch();
+            break;
+
+        default:
+            system("cls");
+            break;
+        }
+
+        system("cls");
+        } while(op != 0);
+
+    return 0;
+}
+
+
+void capturarNodo(cLista& g) {
+    string nombre, estado, clima, atraccion;
+    int magicoDesde, temp;
+
+    cout << endl << endl << "\t\tIngresa el nombre del Pueblo Magico: ";
+    cin >> nombre;
+
+    cout << endl << "\t\tIngresa el estado donde se encuentra: ";
+    cin >> estado;
+
+    cout << endl << "\t\tIngresa el anio desde que es Pueblo Magico: ";
+    cin >> magicoDesde;
+
+    cout << endl << "\t\tIngresa el tipo de clima que predomina: ";
+    cin >> clima;
+
+    cout << endl << "\t\tIngresa la temperatura promedio: ";
+    cin >> temp;
+
+    cout << endl << "\t\tIngresa la atraccion principal: ";
+    cin >> atraccion;
+
+    g.insertarNodo(nombre, estado, magicoDesde, clima, temp, atraccion);
+}
+
+void capturarAdyacencia(cLista& g) {
+    string origen, destino;
+    int distancia, vista, seguridad;
+
+    cout << endl << endl <<"\t\tIngresa el nombre del nodo de origen: ";
+    cin >> origen;
+
+    cout << endl <<"\t\tIngresa el nombre del nodo de destino: ";
+    cin >> destino;
+
+    cout << endl <<"\t\tIngresa la distancia entre origen y destino: ";
+    cin >> distancia;
+
+    cout << endl <<"\t\tIngresa la puntuacion de vista: ";
+    cin >> vista;
+
+    cout << endl <<"\t\tIngresa la puntuacion de seguridad: ";
+    cin >> seguridad;
+
+    g.insertarAdyacencia(origen, distancia, vista, seguridad, destino);
+}
+
+void eliminarNodo(cLista& g) {
+    string nombre;
+
+    cout << endl << endl <<"\t\tIngresa el nombre del nodo a eliminar: ";
+    cin >> nombre;
+
+    g.eliminarNodo(nombre);
+}
+
+void eliminarAdyacencia(cLista& g) {
+    string origen, destino;
+
+    cout << endl << endl <<"\t\tIngresa el nombre del nodo de origen: ";
+    cin >> origen;
+
+    cout << endl <<"\t\tIngresa el nombre del nodo de destino: ";
+    cin >> destino;
+
+    g.eliminarAdyacencia(origen, destino);
 }
