@@ -24,7 +24,7 @@ void cNodo::insertarAdelante(std::string nombre, std::string estado, int magicoD
     newNode->pAnt = this;
 
     this->pSig = newNode;
-    this->pSig->pSig->pAnt = this;
+    this->pSig->pSig->pAnt = newNode;
 }
 
 void cNodo::insertarAdyacencia(int d, int v, int s, std::string a) {
